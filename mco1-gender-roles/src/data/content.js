@@ -11,6 +11,7 @@ export const siteConfig = {
   projectTitle: 'Critical Exploration and Creative Presentation of Gender Roles in the Philippine Context',
   courseOutput: 'MCO 1 — Major Course Output',
   websiteTopic: 'Gender Roles in the Philippines: Historical and Contemporary Perspectives',
+  groupName: 'WONDER PETS',
   members: [
     'SEAN CASIRACAN',
     'SUNNY CORPIN',

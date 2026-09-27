@@ -7,19 +7,19 @@
 
 export const timelineData = [
   {
-    id: 'precolonial',
-    period: 'Pre-Colonial Philippines',
-    range: 'Before c. 1521',
-    summary:
-      'Many pre-colonial Philippine communities followed a bilateral kinship system, and women could hold significant economic, spiritual, and social standing.',
-    details: [
-      'Kinship and inheritance in many pre-colonial communities were bilateral, meaning descent and property could pass through both the mother\'s and father\'s lines, rather than favoring one side. [VERIFY — cite a specific historical or anthropological source.]',
-      'The babaylan (also known by other regional names) were spiritual leaders and healers, and this role was commonly held by women or by men who took on a woman\'s social role. [VERIFY — cite a specific source, e.g. published research on babaylan.]',
-      'Women in many communities could own and manage property, engage in trade, and participate in community decision-making alongside men.',
-      'Gender divisions of labor existed — for example, in farming, fishing, or craft production — but responsibilities were often complementary rather than strictly hierarchical.',
-    ],
-    imageAlt: 'Illustration representing pre-colonial Filipino community life',
-  },
+  id: 'precolonial',
+  period: 'Pre-Colonial Philippines',
+  range: 'Before c. 1521',
+  summary:
+    'Before Spanish colonization, many Philippine communities had relatively flexible gender relations, with women holding important roles in family life, economic activity, spirituality, and community leadership.',
+  details: [
+    'Historical accounts describe women in many pre-colonial Philippine communities as having significant social and economic standing, including the ability to own property and manage family resources.',
+    'Babaylan, known by different names across Philippine communities, served as spiritual leaders, healers, advisers, and important figures in community life. These roles were predominantly associated with women, although some men also performed babaylan roles.',
+    'Women could exercise influence beyond the household, while women and men contributed to the economic and social life of their communities through different but often complementary responsibilities.',
+    'Gender roles varied among the diverse communities of the Philippine archipelago, so pre-colonial society should not be understood as having one uniform system of gender relations.',
+  ],
+  imageAlt: 'Illustration representing community life in the pre-colonial Philippines',
+},
   {
     id: 'spanish',
     period: 'Spanish Colonial Period',
