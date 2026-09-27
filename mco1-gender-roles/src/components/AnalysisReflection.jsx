@@ -22,15 +22,57 @@ export default function AnalysisReflection() {
                   <th scope="col">Contemporary expectation</th>
                 </tr>
               </thead>
-              <tbody>
-                {analysis.comparisonRows.map((row) => (
-                  <tr key={row.theme}>
-                    <th scope="row">{row.theme}</th>
-                    <td>{row.historical}</td>
-                    <td>{row.contemporary}</td>
-                  </tr>
-                ))}
-              </tbody>
+          <tbody>
+  {analysis.comparisonRows.map((row) => (
+    <tr key={row.theme}>
+      <th scope="row">{row.theme}</th>
+
+      <td>
+        <p>{row.historical}</p>
+
+        {row.historicalSources && row.historicalSources.length > 0 && (
+          <p className="compare-table__sources">
+            <strong>Sources:</strong>{' '}
+            {row.historicalSources.map((source, index) => (
+              <span key={source.url}>
+                <a
+                  href={source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {source.name} ↗
+                </a>
+                {index < row.historicalSources.length - 1 && ' · '}
+              </span>
+            ))}
+          </p>
+        )}
+      </td>
+
+      <td>
+        <p>{row.contemporary}</p>
+
+        {row.contemporarySources && row.contemporarySources.length > 0 && (
+          <p className="compare-table__sources">
+            <strong>Sources:</strong>{' '}
+            {row.contemporarySources.map((source, index) => (
+              <span key={source.url}>
+                <a
+                  href={source.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {source.name} ↗
+                </a>
+                {index < row.contemporarySources.length - 1 && ' · '}
+              </span>
+            ))}
+          </p>
+        )}
+      </td>
+    </tr>
+  ))}
+</tbody>
             </table>
           </div>
 

@@ -245,43 +245,137 @@ sources: [
 
 export const analysis = {
   pullQuote:
-    "Progress in gender equality is rarely a clean break from the past — it is a layering of old expectations and new opportunities, still being sorted out.",
-  pullQuoteAttribution: "Our group's synthesis, based on the comparison below",
+  'Changes in gender roles in the Philippines reflect both progress and continuity: opportunities have expanded across education, work, and leadership, while some gender expectations and inequalities continue to shape family and social life.',
+
+pullQuoteAttribution:
+  "Our group's synthesis, based on the historical and contemporary comparison",
   comparisonTitle: 'Historical vs. contemporary expectations',
   comparisonIntro:
     'Placing historical and contemporary gender expectations side by side makes both the progress and the continuities easier to see.',
   comparisonRows: [
+   {
+  theme: 'Leadership',
+
+  historical:
+    'Women held important spiritual and community roles in many pre-colonial Philippine communities, including as babaylan. Spanish colonial rule later reshaped gender relations through religious and social institutions that increasingly emphasized patriarchal authority and more restrictive expectations for women.',
+
+  historicalSources: [
     {
-      theme: 'Leadership',
-      historical: 'Spiritual and community leadership was open to women (e.g., the babaylan) in many pre-colonial communities; colonial rule later restricted women\'s formal authority.',
-      contemporary: 'Women hold high public office and lead organizations, but remain underrepresented in many leadership positions overall.',
+      name: 'Philippine Commission on Women',
+      url: 'https://pcw.gov.ph/2026-tinig-ng-kababaihan/',
     },
     {
-      theme: 'Work',
-      historical: 'Pre-colonial gender division of labor existed but was often complementary; colonial-era ideals pushed women toward the domestic sphere.',
-      contemporary: 'Women participate widely in paid work across sectors, though pay gaps and "glass ceiling" effects persist in some industries.',
+      name: 'Philippine Commission on Women — Colonial Roots of Gender Inequality',
+      url: 'https://pcw.gov.ph/pcw-calls-for-an-end-of-violence-against-women-vaw-and-its-colonial-roots-towards-a-bagong-pilipinas/',
+    },
+  ],
+
+  contemporary:
+    'Women participate in political and public leadership in the Philippines, but they remain underrepresented in elective positions. Based on 2025 election results reported by the Philippine Statistics Authority, women held 24.2% of occupied elective positions, compared with 75.8% held by men.',
+
+  contemporarySources: [
+    {
+      name: 'Philippine Statistics Authority — 2026 Fact Sheet on Women and Men',
+      url: 'https://psa.gov.ph/gender-statistics',
+    },
+  ],
+},
+{
+  theme: 'Work',
+
+  historical:
+    'Women and men contributed to the economic and social life of many pre-colonial Philippine communities through different but often complementary responsibilities. During Spanish colonial rule, gender expectations increasingly emphasized women’s responsibilities in family and household life.',
+
+  historicalSources: [
+    {
+      name: 'Philippine Commission on Women — Tinig ng Kababaihan',
+      url: 'https://pcw.gov.ph/2026-tinig-ng-kababaihan/',
     },
     {
-      theme: 'Education',
-      historical: 'Formal education access expanded unevenly across colonial periods, with women gaining broader access mainly during the American period.',
-      contemporary: 'Access to education is broadly similar across genders, though field-of-study choices still reflect gendered assumptions.',
+      name: 'Philippine Commission on Women — Colonial Roots of Gender Inequality',
+      url: 'https://pcw.gov.ph/pcw-calls-for-an-end-of-violence-against-women-vaw-and-its-colonial-roots-towards-a-bagong-pilipinas/',
+    },
+  ],
+
+  contemporary:
+    'Women participate across a wide range of occupations and industries in the Philippine labor market, but differences in economic participation remain. The Philippine Statistics Authority’s 2026 Fact Sheet on Women and Men reports that in 2025, the labor-force participation rate was 53.4% for women and 74.6% for men.',
+
+  contemporarySources: [
+    {
+      name: 'Philippine Statistics Authority — 2026 Fact Sheet on Women and Men',
+      url: 'https://psa.gov.ph/gender-statistics',
+    },
+  ],
+},
+   {
+  theme: 'Education',
+
+  historical:
+    'Educational opportunities for women were limited for much of the Spanish colonial period, although some women, particularly from more privileged families, received formal or religious education. During the American colonial period, the expansion of the public school system broadened access to formal education for both girls and boys.',
+
+  historicalSources: [
+    {
+      name: 'Philippine Commission on Women — Colonial Roots of Gender Inequality',
+      url: 'https://pcw.gov.ph/pcw-calls-for-an-end-of-violence-against-women-vaw-and-its-colonial-roots-towards-a-bagong-pilipinas/',
     },
     {
-      theme: 'Family roles',
-      historical: 'Bilateral (both-sided) kinship and shared property rights characterized many pre-colonial communities before colonial-era norms emphasized male household headship.',
-      contemporary: 'Dual-income households are common, but caregiving and domestic labor still fall disproportionately on women.',
+      name: 'Department of Education — History',
+      url: 'https://www.deped.gov.ph/about-deped/history/',
     },
+  ],
+
+  contemporary:
+    'Women and girls have substantial participation in Philippine education. Data from the 2020 Census of Population and Housing show that females accounted for a larger share of people with college or academic degrees than males. However, gender stereotypes can still influence perceptions of which fields of study or careers are considered appropriate for women and men.',
+
+  contemporarySources: [
+    {
+      name: 'Philippine Statistics Authority — Literacy and Educational Attainment',
+      url: 'https://psa.gov.ph/content/literacy-rate-and-educational-attainment-among-persons-five-years-old-and-over-philippines',
+    },
+    {
+      name: 'Philippine Commission on Women — Education',
+      url: 'https://pcw.gov.ph/education/',
+    },
+  ],
+},
+{
+  theme: 'Family roles',
+
+  historical:
+    'Many pre-colonial Philippine communities had relatively flexible gender relations, with women holding important roles in family and economic life and having significant social and economic standing. Spanish colonial rule later reinforced gender expectations that increasingly emphasized women’s domestic, caregiving, and religious responsibilities.',
+
+  historicalSources: [
+    {
+      name: 'Philippine Commission on Women — Tinig ng Kababaihan',
+      url: 'https://pcw.gov.ph/2026-tinig-ng-kababaihan/',
+    },
+    {
+      name: 'Philippine Commission on Women — Colonial Roots of Gender Inequality',
+      url: 'https://pcw.gov.ph/pcw-calls-for-an-end-of-violence-against-women-vaw-and-its-colonial-roots-towards-a-bagong-pilipinas/',
+    },
+  ],
+
+  contemporary:
+    'Family roles have become less rigid, but unpaid care and domestic work remain unequally distributed. Women and girls continue to carry a disproportionate share of responsibilities such as household work, childcare, and care for elderly, sick, or disabled family members.',
+
+  contemporarySources: [
+    {
+      name: 'Philippine Commission on Women — Unpaid Care and Domestic Work',
+      url: 'https://pcw.gov.ph/care-on-care-work-ph-holds-consultation-on-valuing-and-investing-in-unpaid-care-and-domestic-work/',
+    },
+  ],
+},
   ],
   groupAnalysisLabel: 'Our group\'s analysis',
   groupAnalysis:
-    "Based on our exploration, gender roles in the Philippines have changed over time due to historical, cultural, educational, and social influences. However, some expectations and inequalities continue to affect individuals and communities. [Replace this paragraph with your group's own analysis, written in your own words and grounded in the sources you gathered.]",
+  'Based on our comparison, we see gender roles in the Philippines as changing rather than simply disappearing. Historical shifts in religion, education, family life, and social institutions influenced what was expected of women and men, while later developments expanded opportunities in education, employment, leadership, and public participation. At the same time, the contemporary evidence shows that greater access does not automatically remove gender inequality. Differences in labor-force participation, women’s underrepresentation in elective positions, and the unequal distribution of unpaid care and domestic work show that some gender expectations continue in new forms. For our group, this suggests that understanding gender roles requires looking at both the progress that has been made and the social expectations and institutional patterns that continue to influence everyday life.',
   reflectionQuestions: [
-    'How have gender roles in the Philippines changed over time?',
-    'What challenges continue to exist despite this change?',
-    'How do gender expectations affect individuals in their daily lives?',
-    'How do gender roles affect Philippine society more broadly?',
-    'What can students learn from studying gender roles critically?',
-  ],
+  'How have gender roles and expectations in the Philippines changed from earlier historical periods to the present?',
+  'Which gender expectations or inequalities appear to have continued despite expanded opportunities in education, work, and public life?',
+  'How can gender expectations influence people’s choices, responsibilities, and opportunities in everyday life?',
+  'How can family, education, media, workplaces, and public institutions reinforce or challenge gender roles in Philippine society?',
+  'Why is it important for students to examine both historical change and continuing gender inequalities critically?',
+],
 }
 
 // Gender Issues and Realities — required topics from the MCO 1 brief

@@ -1022,6 +1022,25 @@ button { font-family: var(--font-body); cursor: pointer; }
   font-size: 0.92rem;
 }
 
+.compare-table__sources {
+  margin-top: 0.75rem;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.compare-table__sources strong {
+  font-weight: 700;
+}
+
+.compare-table__sources a {
+  color: var(--rust);
+  text-decoration: none;
+}
+
+.compare-table__sources a:hover {
+  text-decoration: underline;
+}
+
 .compare-table tbody th { color: var(--navy); font-weight: 600; width: 120px; }
 .compare-table td { color: var(--ink-soft); }
 
@@ -1029,6 +1048,7 @@ button { font-family: var(--font-body); cursor: pointer; }
 .compare-table tbody tr:last-child th { border-bottom: none; }
 
 .table-scroll { overflow-x: auto; }
+
 
 .pull-quote {
   background: var(--navy);
