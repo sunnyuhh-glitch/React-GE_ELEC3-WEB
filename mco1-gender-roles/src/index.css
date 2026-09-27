@@ -1119,14 +1119,25 @@ button { font-family: var(--font-body); cursor: pointer; }
 .reflection li { color: var(--ink-soft); padding-left: 4px; }
 .reflection li::marker { color: var(--terracotta); font-weight: 600; }
 
-/* ── Multimedia — magazine bento gallery ──────────────────────────── */
+/* ─────────────────────────────────────────────────────────
+   MULTIMEDIA GALLERY
+   ───────────────────────────────────────────────────────── */
+
 .media-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 160px;
   gap: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
+
+  /* IMPORTANT:
+     Do not use grid-auto-rows here.
+     Each gallery item can determine its own height. */
 }
+
+
+/* ─────────────────────────────────────────────────────────
+   BASE MEDIA CARD
+   ───────────────────────────────────────────────────────── */
 
 .media-card {
   position: relative;
@@ -1136,46 +1147,343 @@ button { font-family: var(--font-body); cursor: pointer; }
   background: var(--surface);
 }
 
-.media-card--feature { grid-column: span 4; grid-row: span 2; }
-.media-card--tall { grid-column: span 2; grid-row: span 2; }
-.media-card--wide { grid-column: span 3; grid-row: span 1; }
 
-.media-card__media {
+/* ─────────────────────────────────────────────────────────
+   GALLERY LAYOUT
+   ───────────────────────────────────────────────────────── */
+
+/* Boxer Codex */
+.media-card--feature {
+  grid-column: span 4;
+  height: 420px;
+}
+
+/* Spanish colonial image */
+.media-card--tall {
+  grid-column: span 2;
+  height: 420px;
+}
+
+/* American classroom + contemporary workplace */
+.media-card--wide {
+  grid-column: span 3;
+  height: 280px;
+}
+
+/* Infographic */
+.media-card--infographic {
+  grid-column: 1 / -1;
+  height: auto;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   NORMAL PHOTO CONTAINER
+   ───────────────────────────────────────────────────────── */
+
+.media-card:not(.media-card--infographic) .media-card__media {
   position: absolute;
   inset: 0;
-  background: linear-gradient(150deg, var(--beige), var(--navy-soft) 190%);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--navy);
-  transition: transform 0.4s ease;
 
-  .media-card__media img {
+  overflow: hidden;
+
+  background: linear-gradient(
+    150deg,
+    var(--beige),
+    var(--navy-soft) 190%
+  );
+}
+
+
+/* Normal photos */
+.media-card:not(.media-card--infographic) .media-card__media img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
+  object-position: center;
+
   display: block;
-}
+
+  transition: transform 0.4s ease;
 }
 
-.media-card:hover .media-card__media { transform: scale(1.04); }
+
+/* Photo hover */
+.media-card:not(.media-card--infographic):hover
+.media-card__media img {
+  transform: scale(1.025);
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   INFOGRAPHIC
+   ───────────────────────────────────────────────────────── */
+
+.media-card--infographic .media-card__media {
+  position: relative;
+
+  width: 100%;
+  height: auto;
+
+  padding: 32px;
+
+  background: var(--surface);
+
+  display: block;
+}
+
+
+/* Complete infographic — NO cropping */
+.media-card--infographic .media-card__media img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-width: 100%;
+  max-height: none;
+
+  object-fit: contain;
+
+  margin: 0 auto;
+
+  transform: none;
+}
+
+
+/* Never zoom infographic */
+.media-card--infographic:hover .media-card__media img {
+  transform: none;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   CAPTIONS
+   ───────────────────────────────────────────────────────── */
 
 .media-card__caption {
   position: absolute;
+
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 16px 18px;
-  background: linear-gradient(to top, rgba(11,23,51,0.82), rgba(11,23,51,0));
+
+  padding: 18px 20px;
+
+  background: linear-gradient(
+    to top,
+    rgba(11, 23, 51, 0.92),
+    rgba(11, 23, 51, 0.58) 55%,
+    rgba(11, 23, 51, 0)
+  );
+
   color: #fff;
+
+  z-index: 2;
 }
 
-.media-card__caption strong { display: block; font-family: var(--font-display); font-size: 1.02rem; }
-.media-card__caption span { font-size: 0.76rem; color: rgba(255,255,255,0.75); }
+
+.media-card__caption strong {
+  display: block;
+
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  line-height: 1.3;
+}
+
+
+.media-card__caption span {
+  display: block;
+
+  margin-top: 5px;
+
+  font-size: 0.76rem;
+  line-height: 1.4;
+
+  color: rgba(255, 255, 255, 0.78);
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   INFOGRAPHIC CAPTION
+   ───────────────────────────────────────────────────────── */
+
+/*
+   The infographic needs space below the image for the
+   absolute caption so that it does not cover important text.
+*/
+
+.media-card--infographic .media-card__media {
+  padding-bottom: 95px;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   VIDEO BLOCK
+   ───────────────────────────────────────────────────────── */
+
+.video-block {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+
+  background: var(--surface);
+
+  padding: 26px;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+
+  gap: 26px;
+
+  align-items: center;
+
+  /*
+     The video now appears AFTER the complete natural
+     height of the infographic.
+  */
+  margin-top: 0;
+}
+
+
+.video-block__embed {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-sm);
+
+  background: var(--navy);
+}
+
+
+.video-block__embed iframe {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+
+.video-block__content h3,
+.video-block h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+
+.video-block__content p,
+.video-block p {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+
+.video-block__source {
+  margin-top: 12px;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   TABLET
+   ───────────────────────────────────────────────────────── */
+
+@media (max-width: 1000px) {
+
+  .media-card--feature {
+    grid-column: span 4;
+    height: 360px;
+  }
+
+  .media-card--tall {
+    grid-column: span 2;
+    height: 360px;
+  }
+
+  .media-card--wide {
+    grid-column: span 3;
+    height: 250px;
+  }
+
+  .media-card--infographic {
+    grid-column: 1 / -1;
+  }
+
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   MOBILE
+   ───────────────────────────────────────────────────────── */
 
 @media (max-width: 760px) {
-  .media-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; }
-  .media-card--feature, .media-card--tall, .media-card--wide { grid-column: span 2; grid-row: span 1; }
+
+  .media-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+
+  .media-card--feature,
+  .media-card--tall,
+  .media-card--wide {
+    grid-column: 1 / -1;
+    height: 280px;
+  }
+
+
+  .media-card--infographic {
+    grid-column: 1 / -1;
+    height: auto;
+  }
+
+
+  .media-card--infographic .media-card__media {
+    padding: 12px 12px 85px;
+  }
+
+
+  .media-card--infographic .media-card__media img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+  }
+
+
+  .media-card__caption {
+    padding: 14px 16px;
+  }
+
+
+  .media-card__caption strong {
+    font-size: 0.95rem;
+  }
+
+
+  .media-card__caption span {
+    font-size: 0.72rem;
+  }
+
+
+  .video-block {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 18px;
+  }
+
 }
 
 .video-block {
@@ -1189,23 +1497,46 @@ button { font-family: var(--font-body); cursor: pointer; }
   align-items: center;
 }
 
-.video-block__placeholder {
-  aspect-ratio: 16/9;
-  background: var(--navy);
+.video-block__embed {
+  width: 100%;
+  aspect-ratio: 16 / 9;
   border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold-soft);
+  overflow: hidden;
+  background: var(--navy);
+}
+
+.video-block__embed iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-block__content {
+  min-width: 0;
+}
+
+.video-block__source {
+  margin-top: 14px;
+}
+
+.video-block__source a {
+  color: var(--navy);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .video-block h3 { font-size: 1.1rem; margin-bottom: 8px; }
 .video-block p { color: var(--ink-soft); font-size: 0.95rem; }
 
 @media (max-width: 760px) {
-  .video-block { grid-template-columns: 1fr; }
+  .video-block {
+    grid-template-columns: 1fr;
+    padding: 18px;
+    gap: 20px;
+  }
 }
-
 /* ── Conclusion ────────────────────────────────────────────────────── */
 .conclusion__text p {
   color: rgba(255,255,255,0.88);

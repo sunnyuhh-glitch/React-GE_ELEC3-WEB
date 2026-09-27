@@ -1,4 +1,4 @@
-import { PlayCircle } from 'lucide-react'
+
 import SectionHeader from './SectionHeader.jsx'
 import Reveal from './Reveal.jsx'
 import { galleryImages, galleryVideos } from '../data/mediaData.js'
@@ -34,22 +34,42 @@ export default function MultimediaGallery() {
           ))}
         </Reveal>
 
-        {galleryVideos.map((video) => (
-          <Reveal
-            className="video-block"
-            key={video.id}
-            delay={80}
-          >
-            <div className="video-block__placeholder" aria-hidden="true">
-              <PlayCircle size={40} />
-            </div>
+       {galleryVideos.map((video) => (
+  <Reveal
+    className="video-block"
+    key={video.id}
+    delay={80}
+  >
+    <div className="video-block__embed">
+      <iframe
+        src={video.embedUrl}
+        title={video.title}
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      />
+    </div>
 
-            <div>
-              <h3>{video.title}</h3>
-              <p>{video.description}</p>
-            </div>
-          </Reveal>
-        ))}
+    <div className="video-block__content">
+      <h3>{video.title}</h3>
+
+      <p>{video.description}</p>
+
+      {video.sourceUrl && (
+        <p className="video-block__source">
+          <strong>Source:</strong>{' '}
+          <a
+            href={video.sourceUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {video.sourceName} ↗
+          </a>
+        </p>
+      )}
+    </div>
+  </Reveal>
+))}
       </div>
     </section>
   )
