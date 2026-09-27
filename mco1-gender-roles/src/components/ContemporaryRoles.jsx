@@ -5,6 +5,30 @@ import { contemporaryDomains } from '../data/content.js'
 
 const ICONS = { Home, GraduationCap, Briefcase, Tv, Landmark, Users }
 
+function DomainSources({ sources }) {
+  if (!sources || sources.length === 0) {
+    return null
+  }
+
+  return (
+    <p className="bento-card__sources">
+      <strong>Sources:</strong>{' '}
+      {sources.map((source, index) => (
+        <span key={source.url}>
+          <a
+            href={source.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {source.name} ↗
+          </a>
+          {index < sources.length - 1 && ' · '}
+        </span>
+      ))}
+    </p>
+  )
+}
+
 function DomainCard({ domain }) {
   const Icon = ICONS[domain.icon] ?? Home
 
@@ -22,6 +46,8 @@ function DomainCard({ domain }) {
               <li key={point}>{point}</li>
             ))}
           </ul>
+           <DomainSources sources={domain.sources} />
+
         </div>
         <div aria-hidden="true" style={{ display: 'flex', justifyContent: 'center' }}>
           <Icon size={120} style={{ opacity: 0.14 }} />
@@ -38,6 +64,7 @@ function DomainCard({ domain }) {
       <h3>{domain.title}</h3>
       <div className="bento-card__summary">{domain.summary}</div>
       <ul>
+        <DomainSources sources={domain.sources} />
         {domain.points.map((point) => (
           <li key={point}>{point}</li>
         ))}

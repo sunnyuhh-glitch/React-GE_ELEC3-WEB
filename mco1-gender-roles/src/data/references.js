@@ -1,8 +1,8 @@
 // ─────────────────────────────────────────────────────────────────────────
 // REFERENCES
-// Replace the [VERIFY / PLACEHOLDER] entries with your group's actual,
+// Replace the / PLACEHOLDER] entries with your group's actual,
 // verified sources before submission. Every factual claim marked
-// "[VERIFY]" in content.js or timelineData.js should be backed by a
+// "[]" in content.js or timelineData.js should be backed by a
 // real entry here. Do not invent authors, years, or URLs.
 //
 // type: "book" | "journal" | "government" | "website" | "image" | "video"

@@ -114,53 +114,89 @@ export const understanding = {
 // Contemporary Gender Roles — six domains required by the MCO 1 brief
 export const contemporaryDomains = [
   {
-    id: 'family',
-    size: 'feature',
-    title: 'Family',
-    icon: 'Home',
-    summary: 'Household responsibilities, parenting, and caregiving.',
-    points: [
-      'Household chores and caregiving are still commonly associated with women, even in households where both partners work outside the home.',
-      'Fathers are increasingly visible in day-to-day childcare, though "helping out" is still often framed as secondary to a mother\'s role rather than an equally shared responsibility.',
-      'Extended Filipino families frequently rely on women — mothers, grandmothers, aunts, and elder daughters — as default caregivers for children and elderly relatives.',
-    ],
-  },
+  id: 'family',
+  size: 'feature',
+  title: 'Family',
+  icon: 'Home',
+  summary: 'Household responsibilities, parenting, and caregiving.',
+  points: [
+    'Unpaid care and domestic work — including cooking, cleaning, household maintenance, childcare, and care for elderly, sick, or disabled family members — remains an important part of everyday family life in the Philippines.',
+    'Women and girls continue to carry a disproportionate share of unpaid care and domestic work, reflecting gender norms that have traditionally associated caregiving and household responsibilities with women.',
+    'Recognizing, reducing, and redistributing unpaid care work among household members and through public and community support is increasingly emphasized as part of efforts toward greater gender equality.',
+  ],
+  sources: [
+    {
+      name: 'Philippine Commission on Women',
+      url: 'https://pcw.gov.ph/care-on-care-work-ph-holds-consultation-on-valuing-and-investing-in-unpaid-care-and-domestic-work/',
+    },
+  ],
+},
   {
-    id: 'education',
-    size: 'medium',
-    title: 'Education',
-    icon: 'GraduationCap',
-    summary: 'Access, expectations, and fields of study.',
-    points: [
-      'Access to basic and higher education in the Philippines is broadly similar across genders today, a shift from earlier historical periods.',
-      'Certain fields — such as engineering, ICT, and the skilled trades — are still perceived as "male" fields, while nursing, education, and social work are perceived as "female" fields.',
-      'These perceptions can shape which subjects students feel encouraged, or discouraged, to pursue, independent of actual ability or interest.',
-    ],
-  },
-  {
-    id: 'workplace',
-    size: 'medium',
-    title: 'Workplace',
-    icon: 'Briefcase',
-    summary: 'Employment, leadership, and equal opportunity.',
-    points: [
-      'Filipino women participate broadly in the workforce, including in professional and managerial roles.',
-      'Leadership positions in many industries still skew toward men, particularly at senior executive levels.',
-      'Issues such as unequal pay for comparable work, hiring bias, and limited support for working parents remain part of ongoing workplace discussions.',
-    ],
-  },
-  {
-    id: 'media',
-    size: 'wide',
-    title: 'Media',
-    icon: 'Tv',
-    summary: 'Representation and stereotypes on screen.',
-    points: [
-      'Philippine television, film, and advertising have historically relied on narrow stereotypes — the self-sacrificing mother, the macho provider, the comic "effeminate" character.',
-      'Recent years have seen more varied portrayals, including stronger female leads and more nuanced depictions of masculinity.',
-      'Media representation matters because it shapes what audiences, especially young people, believe is "normal" or expected for their gender.',
-    ],
-  },
+  id: 'education',
+  size: 'medium',
+  title: 'Education',
+  icon: 'GraduationCap',
+  summary: 'Access, expectations, and fields of study.',
+  points: [
+    'Women and girls have substantial participation in Philippine education. Data from the 2020 Census of Population and Housing show that females accounted for a larger share of people with college or academic degrees than males.',
+    'Educational participation does not necessarily remove gender expectations about academic and career choices. Students may still encounter stereotypes about which subjects, courses, or occupations are considered more appropriate for women or men.',
+    'Gender-responsive education therefore involves not only access to schooling but also challenging stereotypes and creating learning environments where students can pursue fields based on their interests and abilities rather than gender expectations.',
+  ],
+  sources: [
+    {
+      name: 'Philippine Statistics Authority',
+      url: 'https://psa.gov.ph/content/literacy-rate-and-educational-attainment-among-persons-five-years-old-and-over-philippines',
+    },
+    {
+      name: 'Philippine Commission on Women',
+      url: 'https://pcw.gov.ph/education/',
+    },
+  ],
+},
+ {
+  id: 'workplace',
+  size: 'medium',
+  title: 'Workplace',
+  icon: 'Briefcase',
+  summary: 'Participation, opportunity, and equality at work.',
+  points: [
+    'Women and men participate across a wide range of occupations and industries in the Philippine labor market, although their patterns of employment and representation are not identical.',
+    'Gender inequality in the workplace can involve differences in economic participation, access to opportunities, representation in decision-making positions, and exposure to discrimination or sexual harassment.',
+    'Efforts toward gender equality at work therefore include protecting labor rights, preventing discrimination and harassment, expanding economic opportunities, and supporting women\'s participation in higher-income and decision-making roles.',
+  ],
+  sources: [
+    {
+      name: 'Philippine Statistics Authority',
+      url: 'https://psa.gov.ph/statistics/labor-force-survey/special-release/stat-tables',
+    },
+    {
+      name: 'Philippine Commission on Women',
+      url: 'https://pcw.gov.ph/assets/files/2020/05/GEWE-Plan-2019-2025-Results-Matrices.pdf?x12374=',
+    },
+  ],
+},
+ {
+  id: 'media',
+  size: 'medium',
+  title: 'Media',
+  icon: 'Tv',
+  summary: 'Representation, stereotypes, and gender-fair communication.',
+  points: [
+    'Media can influence how people understand gender by shaping the images, roles, behaviors, and expectations associated with women and men in news, entertainment, advertising, and digital content.',
+    'Gender stereotypes and discriminatory or objectifying portrayals can reinforce unequal expectations, while balanced and respectful representation can help challenge rigid ideas about gender roles.',
+    'Philippine gender-fair media guidelines encourage balanced representation, non-discriminatory portrayals, gender-fair language, and media content that recognizes the dignity, rights, and contributions of women.',
+  ],
+  sources: [
+    {
+      name: 'Philippine Commission on Women — Gender-Fair Media Guidebook',
+      url: 'https://pcw.gov.ph/mgec-launches-revised-gender-fair-media-guidebook-2/',
+    },
+    {
+      name: 'Magna Carta of Women — Media and Film',
+      url: 'https://pcw.gov.ph/magna-carta-of-women/',
+    },
+  ],
+},
   {
     id: 'leadership',
     size: 'split',
@@ -168,10 +204,20 @@ export const contemporaryDomains = [
     icon: 'Landmark',
     summary: 'Public office, organizations, and barriers.',
     points: [
-      'The Philippines has elected women to its highest offices, including the presidency, and Filipino women are active in local and national government.',
-      'Despite this visibility at the top, women remain underrepresented in many local government units and in certain sectors of leadership overall.',
-      'Barriers to leadership can include unequal access to networks, caregiving demands, and persistent assumptions about who "looks like" a leader.',
-    ],
+  'Women participate in political and public leadership in the Philippines, but they remain substantially underrepresented in elective positions compared with men.',
+  'Based on the 2025 election results reported by the Philippine Statistics Authority, women held 24.2% of occupied elective positions, while men held 75.8%.',
+  'Philippine gender-equality policy promotes women\'s meaningful participation in decision-making and seeks greater representation of women in government, development councils, planning bodies, and other leadership positions.',
+],
+sources: [
+  {
+    name: 'Philippine Statistics Authority — 2026 Fact Sheet on Women and Men',
+    url: 'https://psa.gov.ph/gender-statistics',
+  },
+  {
+    name: 'Philippine Commission on Women — Magna Carta of Women',
+    url: 'https://pcw.gov.ph/magna-carta-of-women/',
+  },
+],
   },
   {
     id: 'community',
@@ -180,10 +226,20 @@ export const contemporaryDomains = [
     icon: 'Users',
     summary: 'Civic life and community responsibilities.',
     points: [
-      'Community organizations, from barangay councils to church groups, often depend heavily on women\'s volunteer labor for day-to-day operations.',
-      'Formal leadership of these same organizations has historically been more accessible to men.',
-      'Community gender expectations are slowly shifting as younger Filipinos take on more varied civic roles.',
-    ],
+  'Gender roles also shape participation in community life, including local organizations, development activities, public services, and decision-making processes.',
+  'Philippine law promotes women\'s meaningful participation in local development and requires women to make up at least 40% of the membership of development councils from the regional, provincial, city, municipal, and barangay levels.',
+  'Gender-responsive local governance also involves integrating Gender and Development concerns into local planning, budgeting, implementation, monitoring, and evaluation, with participation from women, civil society organizations, and other community stakeholders.',
+],
+sources: [
+  {
+    name: 'Philippine Commission on Women — Magna Carta of Women',
+    url: 'https://pcw.gov.ph/magna-carta-of-women/',
+  },
+  {
+    name: 'PCW — Localization of the Magna Carta of Women',
+    url: 'https://pcw.gov.ph/pcw-dilg-dbm-neda-joint-memorandum-circular-2024-01-revised-guidelines-on-the-localization-of-the-magna-carta-of-women/',
+  },
+],
   },
 ]
 
