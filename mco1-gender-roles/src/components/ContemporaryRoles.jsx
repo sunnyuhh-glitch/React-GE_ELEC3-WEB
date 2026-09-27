@@ -63,12 +63,13 @@ function DomainCard({ domain }) {
       </div>
       <h3>{domain.title}</h3>
       <div className="bento-card__summary">{domain.summary}</div>
-      <ul>
-        <DomainSources sources={domain.sources} />
-        {domain.points.map((point) => (
-          <li key={point}>{point}</li>
-        ))}
-      </ul>
+     <ul>
+  {domain.points.map((point) => (
+    <li key={point}>{point}</li>
+  ))}
+</ul>
+
+<DomainSources sources={domain.sources} />
     </div>
   )
 }

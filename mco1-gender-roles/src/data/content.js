@@ -286,71 +286,122 @@ export const analysis = {
 
 // Gender Issues and Realities — required topics from the MCO 1 brief
 export const genderIssues = [
+ {
+  id: 'stereotypes',
+  title: 'Gender stereotypes',
+  explanation:
+    'Gender stereotypes are generalized beliefs and expectations about the characteristics, roles, and behaviors considered appropriate for women and men. These expectations can restrict people to roles based on gender rather than their individual abilities, interests, and choices.',
+  context:
+    'In the Philippines, traditional gender norms have often associated women with homemaking and caregiving while men are viewed as primary family providers. These expectations can influence responsibilities at home as well as opportunities in education, employment, and leadership.',
+  example:
+    'Gender stereotypes can also appear in media and advertising through portrayals that repeatedly associate women and men with particular roles, characteristics, products, or responsibilities. Philippine gender-fair media guidelines encourage media practitioners to avoid rigid gender stereotypes and promote balanced and respectful representation.',
+  whyItMatters:
+    'Gender stereotypes can limit opportunities and aspirations by influencing what people are expected or encouraged to do. Challenging these assumptions allows individuals to make choices based more on their abilities, interests, and circumstances rather than prescribed gender roles.',
+  reflection:
+    'Where do you notice gender stereotypes in everyday Philippine life, and how might these expectations influence people’s choices?',
+  sources: [
+    {
+      name: 'Philippine Commission on Women — Unpaid Care and Domestic Work',
+      url: 'https://pcw.gov.ph/care-on-care-work-ph-holds-consultation-on-valuing-and-investing-in-unpaid-care-and-domestic-work/',
+    },
+    {
+      name: 'Philippine Commission on Women — Gender-Fair Media Guidebook',
+      url: 'https://pcw.gov.ph/mgec-launches-revised-gender-fair-media-guidebook-2/',
+    },
+  ],
+},
   {
-    id: 'stereotypes',
-    title: 'Gender stereotypes',
-    explanation:
-      'Stereotypes are oversimplified, widely-held beliefs about how a gender "should" look, act, or feel. They flatten a diverse population into narrow, often inaccurate expectations.',
-    context:
-      'In the Philippines, common examples include the expectation that women are naturally nurturing and men are naturally providers, or that certain personality traits are inherently "masculine" or "feminine."',
-    example:
-      'Filipino media and advertising have long relied on stock characters — the devoted housewife, the tough breadwinner — that reduce complex people to a single trait. [Cite a specific media study or article here.]',
-    whyItMatters:
-      'Stereotypes narrow the choices people feel are available to them, from careers to emotional expression, and can be used to justify unequal treatment.',
-    reflection: 'Where have you personally encountered a gender stereotype, and how did it affect a decision you made?',
-  },
+  id: 'discrimination',
+  title: 'Gender discrimination',
+  explanation:
+    'Gender discrimination occurs when a person experiences unequal treatment, exclusion, or restriction because of gender, affecting their ability to exercise rights or access opportunities, benefits, and resources.',
+  context:
+    'In the Philippines, discrimination against women may occur through laws, policies, administrative measures, institutional practices, or individual actions that directly or indirectly restrict women’s rights or access to opportunities and benefits.',
+  example:
+    'Republic Act No. 9710, or the Magna Carta of Women, is the Philippines’ comprehensive women’s human rights law. It seeks to eliminate discrimination against women and requires the State to protect and promote women’s rights. Section 35 of the law expressly prohibits discrimination against women.',
+  whyItMatters:
+    'Discrimination can restrict access to education, employment, resources, decision-making, and other opportunities. Addressing both direct and indirect discrimination is therefore important to achieving substantive equality.',
+  reflection:
+    'What forms of gender discrimination might still occur in Philippine schools, workplaces, institutions, or communities today?',
+  sources: [
+    {
+      name: 'Philippine Commission on Women — Magna Carta of Women FAQ',
+      url: 'https://pcw.gov.ph/faq-republic-act-9710-the-magna-carta-of-women/',
+    },
+    {
+      name: 'Republic Act No. 9710 — Magna Carta of Women',
+      url: 'https://lawphil.net/statutes/repacts/ra2009/ra_9710_2009.html',
+    },
+  ],
+},
   {
-    id: 'discrimination',
-    title: 'Gender discrimination',
-    explanation:
-      'Discrimination happens when someone is treated unfairly because of their gender, rather than their ability or qualifications.',
-    context:
-      'This can appear in hiring practices, promotion decisions, access to loans or property, or everyday treatment in schools and workplaces.',
-    example:
-      'Republic Act No. 9710, the Magna Carta of Women, was enacted specifically to address discrimination against women in the Philippines. [Verify current provisions and add a direct citation.]',
-    whyItMatters:
-      'Discrimination limits individual opportunity and represents a broader social cost when talent and potential go unused.',
-    reflection: 'What forms of gender discrimination are still common in Philippine workplaces or schools today?',
-  },
+  id: 'opportunities',
+  title: 'Equal opportunities',
+  explanation:
+    'Equal opportunity means creating conditions in which women and men can access rights, resources, education, employment, leadership, and other opportunities without discrimination based on gender.',
+  context:
+    'In the Philippines, gender equality is supported by laws and policies that seek to provide women with equal opportunities and access to resources. However, achieving equal opportunity involves addressing not only formal rules but also social, economic, and institutional barriers that can affect women’s participation.',
+  example:
+    'Republic Act No. 9710, or the Magna Carta of Women, requires the State to promote women’s empowerment, pursue equal opportunities for women and men, and ensure equal access to resources and development results. It also recognizes substantive equality, which considers both equality under the law and equality in actual conditions and outcomes.',
+  whyItMatters:
+    'Having the same formal rights does not always mean that people experience the same opportunities in practice. Addressing barriers that limit participation helps make equality more meaningful in education, employment, leadership, and other areas of life.',
+  reflection:
+    'What barriers might prevent women and men from having genuinely equal opportunities in education, employment, or leadership?',
+  sources: [
+    {
+      name: 'Republic Act No. 9710 — Magna Carta of Women',
+      url: 'https://lawphil.net/statutes/repacts/ra2009/ra_9710_2009.html',
+    },
+  ],
+},
   {
-    id: 'opportunities',
-    title: 'Equal opportunities',
-    explanation:
-      'Equal opportunity means that people of any gender have a fair and comparable chance to access education, employment, leadership, and other resources.',
-    context:
-      'The Philippines has made notable progress on gender parity in education access, but gaps remain in leadership representation and certain industries.',
-    example:
-      'The Philippines is frequently cited as a regional leader in closing gender gaps according to international indices. [Insert the specific index, year, and source.]',
-    whyItMatters:
-      'Equal opportunity is not the same as equal outcome — understanding the difference helps clarify what policies and attitudes still need to change.',
-    reflection: 'What would truly equal opportunity look like in your own field of study or future profession?',
-  },
+  id: 'media-representation',
+  title: 'Representation in media',
+  explanation:
+    'Media representation refers to how women, men, and people of diverse gender identities are portrayed in news, entertainment, advertising, film, television, and digital media. These portrayals can influence public ideas about appropriate roles, behavior, appearance, and opportunities.',
+  context:
+    'In the Philippines, gender-fair media initiatives have sought to address stereotyping, discriminatory portrayals, imbalanced representation, and the use of language or images that diminish the dignity and contributions of women.',
+  example:
+    'The Philippine Gender-Fair Media Guidebook provides practical guidance for evaluating news, entertainment, advertising, and communication materials. It encourages balanced representation, avoidance of gender stereotypes, gender-fair language, and non-discriminatory portrayals in media content.',
+  whyItMatters:
+    'Media helps shape public perceptions. Repeated stereotypes can reinforce narrow expectations, while diverse and respectful representation can make visible a wider range of roles, experiences, and contributions in society.',
+  reflection:
+    'When watching Philippine television, films, advertisements, or online content, what gender stereotypes or examples of gender-fair representation do you notice?',
+  sources: [
+    {
+      name: 'Philippine Commission on Women — Gender-Fair Media Guidebook',
+      url: 'https://pcw.gov.ph/mgec-launches-revised-gender-fair-media-guidebook-2/',
+    },
+    {
+      name: 'Philippine Commission on Women — Gender-Sensitive IEC Materials',
+      url: 'https://pcw.gov.ph/pcw-reminds-govt-agencies-on-gender-sensitive-iec-materials/',
+    },
+  ],
+},
   {
-    id: 'media-representation',
-    title: 'Representation in media',
-    explanation:
-      'How genders are portrayed in film, television, advertising, and social media shapes public expectations of what each gender "should" be.',
-    context:
-      'Philippine entertainment has historically featured limited, often stereotyped roles for women and for LGBTQ+ Filipinos, though representation has broadened in recent years.',
-    example:
-      '[Insert a specific, cited example of a Philippine film, show, or campaign that illustrates changing — or unchanging — representation.]',
-    whyItMatters:
-      'Representation influences self-image, aspiration, and the way audiences judge people who do not fit familiar media molds.',
-    reflection: 'Can you think of a recent Philippine show, film, or ad that broke from a typical gender stereotype?',
-  },
-  {
-    id: 'inequalities',
-    title: 'Gender-based inequalities',
-    explanation:
-      'Beyond individual acts of discrimination, gender-based inequality refers to systemic patterns — in pay, unpaid labor, safety, or political power — that disadvantage a gender as a group.',
-    context:
-      'Examples often cited in Philippine research include unequal distribution of unpaid domestic and care work, and underrepresentation of women in certain leadership tiers.',
-    example:
-      '[Insert a specific statistic from a credible source, such as the Philippine Statistics Authority or PCW, with a full citation.]',
-    whyItMatters:
-      'Systemic inequality persists even when explicit discrimination is illegal, because it is embedded in everyday norms and institutions.',
-    reflection: 'What is one systemic — not individual — gender inequality you notice in daily Philippine life?',
-  },
+  id: 'inequalities',
+  title: 'Gender-based inequalities',
+  explanation:
+    'Gender-based inequality refers to persistent differences in access to opportunities, resources, responsibilities, safety, economic participation, and decision-making that are associated with gender and can extend beyond individual acts of discrimination.',
+  context:
+    'In the Philippines, gender inequalities can be observed in areas such as labor-force participation, unpaid care and domestic work, economic opportunities, and representation in decision-making. These patterns can be influenced by social expectations, institutional practices, and the unequal distribution of paid and unpaid responsibilities.',
+  example:
+    'The Philippine Statistics Authority’s 2026 Fact Sheet on Women and Men reports that in 2025, the labor-force participation rate was 53.4% for women and 74.6% for men. The same fact sheet reports that unpaid family workers accounted for 10.1% among employed women compared with 4.3% among employed men.',
+  whyItMatters:
+    'Gender-based inequalities can affect economic independence, access to opportunities, time available for paid work or education, and participation in public life. Measuring these differences helps identify where policies and institutions may need to address persistent barriers.',
+  reflection:
+    'What gender-based inequality do you notice in everyday Philippine life, and what social or institutional factors might contribute to it?',
+  sources: [
+    {
+      name: 'Philippine Statistics Authority — 2026 Fact Sheet on Women and Men',
+      url: 'https://psa.gov.ph/gender-statistics',
+    },
+    {
+      name: 'Philippine Statistics Authority — Unpaid Care and Domestic Work',
+      url: 'https://rsso07.psa.gov.ph/content/psa-cebu-conducts-april-2026-labor-force-survey-rider-questions-informal-statistics-and',
+    },
+  ],
+},
 ]
 
 export const conclusion = {

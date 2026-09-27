@@ -3,6 +3,30 @@ import SectionHeader from './SectionHeader.jsx'
 import Reveal from './Reveal.jsx'
 import { genderIssues } from '../data/content.js'
 
+function IssueSources({ sources }) {
+  if (!sources || sources.length === 0) {
+    return null
+  }
+
+  return (
+    <p className="issue-card__sources">
+      <strong>Sources:</strong>{' '}
+      {sources.map((source, index) => (
+        <span key={source.url}>
+          <a
+            href={source.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {source.name} ↗
+          </a>
+          {index < sources.length - 1 && ' · '}
+        </span>
+      ))}
+    </p>
+  )
+}
+
 export default function GenderIssues() {
   const [openId, setOpenId] = useState(genderIssues[0]?.id ?? null)
 
@@ -51,6 +75,7 @@ export default function GenderIssues() {
                       <p className="issue-card__label">Discussion point</p>
                       <p className="issue-card__value">{issue.reflection}</p>
                     </div>
+                    <IssueSources sources={issue.sources} />
                   </div>
                 )}
               </article>
