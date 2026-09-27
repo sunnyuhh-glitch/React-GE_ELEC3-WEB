@@ -3,7 +3,7 @@
 // This is the ONE file most groups will need to edit for text content.
 // Replace every [BRACKETED] placeholder with your group's real information.
 // Do not invent statistics, quotes, or facts — if you're not sure something
-// is accurate, mark it "(verify)" and check it against a credible source
+// is accurate, mark it "()" and check it against a credible source
 // before your final submission.
 // ─────────────────────────────────────────────────────────────────────────
 

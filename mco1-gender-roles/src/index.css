@@ -778,6 +778,73 @@ button { font-family: var(--font-body); cursor: pointer; }
   .timeline__plate { aspect-ratio: 16/9; }
 }
 
+.timeline__image {
+  margin: 1.25rem 0 0;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.timeline__image img {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.timeline__image figcaption {
+  padding: 0.85rem 1rem 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.timeline__image-caption {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.timeline__image-credit {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+  opacity: 0.7;
+}
+
+.timeline__sources {
+  margin-top: 1rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  font-size: 0.82rem;
+  line-height: 1.7;
+}
+
+.timeline__sources strong {
+  font-weight: 600;
+  margin-right: 0.25rem;
+}
+
+.timeline__sources a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.timeline__sources a:hover {
+  opacity: 0.65;
+}
+
+.timeline__sources a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
 /* ── Contemporary roles — editorial bento layout ──────────────────── */
 .bento {
   display: grid;
@@ -1062,6 +1129,13 @@ button { font-family: var(--font-body); cursor: pointer; }
   justify-content: center;
   color: var(--navy);
   transition: transform 0.4s ease;
+
+  .media-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 }
 
 .media-card:hover .media-card__media { transform: scale(1.04); }

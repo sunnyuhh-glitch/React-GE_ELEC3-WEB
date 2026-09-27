@@ -1,4 +1,4 @@
-import { ImageIcon, PlayCircle, BarChart2 } from 'lucide-react'
+import { PlayCircle } from 'lucide-react'
 import SectionHeader from './SectionHeader.jsx'
 import Reveal from './Reveal.jsx'
 import { galleryImages, galleryVideos } from '../data/mediaData.js'
@@ -10,15 +10,22 @@ export default function MultimediaGallery() {
         <SectionHeader
           kicker="See it, not just read it"
           title="Multimedia"
-          description="Images, illustrations, and video that support the research above. Replace these placeholders with your own properly attributed media — see the README for instructions."
+          description="Explore photographs, illustrations, infographics, and audiovisual materials that show how gender roles in Philippine society have developed across different historical periods."
         />
 
         <Reveal className="media-grid" as="div">
           {galleryImages.map((image) => (
-            <figure className={`media-card media-card--${image.size}`} key={image.id}>
-              <div className="media-card__media" role="img" aria-label={image.alt}>
-                {image.kind === 'infographic' ? <BarChart2 size={30} /> : <ImageIcon size={28} />}
+            <figure
+              className={`media-card media-card--${image.size}`}
+              key={image.id}
+            >
+              <div className="media-card__media">
+                <img
+                  src={image.image}
+                  alt={image.alt}
+                />
               </div>
+
               <figcaption className="media-card__caption">
                 <strong>{image.caption}</strong>
                 <span>{image.attribution}</span>
@@ -28,10 +35,15 @@ export default function MultimediaGallery() {
         </Reveal>
 
         {galleryVideos.map((video) => (
-          <Reveal className="video-block" key={video.id} delay={80}>
+          <Reveal
+            className="video-block"
+            key={video.id}
+            delay={80}
+          >
             <div className="video-block__placeholder" aria-hidden="true">
               <PlayCircle size={40} />
             </div>
+
             <div>
               <h3>{video.title}</h3>
               <p>{video.description}</p>
