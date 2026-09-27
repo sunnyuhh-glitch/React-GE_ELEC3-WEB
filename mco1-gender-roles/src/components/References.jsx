@@ -17,7 +17,7 @@ export default function References() {
         <SectionHeader
           kicker="Sources"
           title="References"
-          description="Every claim on this website should trace back to a credible source. Placeholder entries are marked clearly — replace them with verified citations before submission."
+          description="Sources used throughout this website include Philippine government publications, official statistics, historical archives, visual materials, and educational media that support the discussion of gender roles in Philippine society."
         />
 
         <div className="ref-filters" role="tablist" aria-label="Filter references by type">

@@ -501,7 +501,8 @@ export const genderIssues = [
 export const conclusion = {
   title: 'Conclusion',
   paragraphs: [
-    "Understanding gender roles in the Philippine context helps us recognize how historical experiences, social expectations, and contemporary realities shape people's lives. By examining both changes and continuing challenges, we can develop a more informed and respectful understanding of gender in society.",
-    "[Replace this paragraph with your group's revised conclusion, once your research is finalized. Summarize your most important findings, connect the historical and contemporary sections, and state your group's overall insight.]",
+    'The history of gender roles in the Philippines shows that expectations about women and men have changed alongside broader transformations in society. Women held important spiritual, family, economic, and community roles in many pre-colonial communities, while Spanish colonial institutions contributed to more restrictive gender expectations. Later developments, including the expansion of formal education and changing social and economic conditions, created wider opportunities for women to participate in education, employment, leadership, and public life.',
+
+    'Contemporary evidence, however, shows that expanded opportunities have not eliminated gender inequality. Women continue to participate substantially in education, work, community life, and leadership, yet differences remain in areas such as labor-force participation, representation in elective positions, and the distribution of unpaid care and domestic work. These patterns demonstrate that gender roles are not fixed: they are shaped by historical experience, social institutions, cultural expectations, and continuing social change. Understanding both the progress achieved and the inequalities that remain can help us examine gender roles more critically and recognize the importance of creating opportunities that are not limited by gender stereotypes or discrimination.',
   ],
 }

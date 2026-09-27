@@ -1537,15 +1537,80 @@ button { font-family: var(--font-body); cursor: pointer; }
     gap: 20px;
   }
 }
-/* ── Conclusion ────────────────────────────────────────────────────── */
-.conclusion__text p {
-  color: rgba(255,255,255,0.88);
-  font-size: 1.1rem;
-  max-width: 68ch;
-  margin-bottom: 18px;
+//* ─────────────────────────────────────────────────────────
+   CONCLUSION
+   ───────────────────────────────────────────────────────── */
+
+#conclusion {
+  padding: 80px 0 96px;
 }
 
-/* ── References ───────────────────────────────────────────────────── */
+#conclusion .section-header {
+  margin-bottom: 42px;
+}
+
+.conclusion__text {
+  max-width: 1050px;
+}
+
+.conclusion__text p {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 75ch;
+  margin: 0 0 24px;
+}
+
+.conclusion__text p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   CONCLUSION — TABLET
+   ───────────────────────────────────────────────────────── */
+
+@media (max-width: 860px) {
+  #conclusion {
+    padding: 68px 0 80px;
+  }
+
+  #conclusion .section-header {
+    margin-bottom: 36px;
+  }
+
+  .conclusion__text p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    max-width: none;
+  }
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   CONCLUSION — MOBILE
+   ───────────────────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  #conclusion {
+    padding: 56px 0 68px;
+  }
+
+  #conclusion .section-header {
+    margin-bottom: 30px;
+  }
+
+  .conclusion__text p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────
+   REFERENCES
+   ───────────────────────────────────────────────────────── */
+
 .ref-filters {
   display: flex;
   gap: 8px;
@@ -1563,9 +1628,17 @@ button { font-family: var(--font-body); cursor: pointer; }
   font-weight: 500;
 }
 
-.ref-filter.is-active { background: var(--navy); color: #fff; border-color: var(--navy); }
+.ref-filter.is-active {
+  background: var(--navy);
+  color: #fff;
+  border-color: var(--navy);
+}
 
-.ref-list { display: flex; flex-direction: column; gap: 14px; }
+.ref-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
 
 .ref-item {
   display: grid;
@@ -1577,16 +1650,51 @@ button { font-family: var(--font-body); cursor: pointer; }
   border-radius: var(--radius-md);
 }
 
-.ref-item__type { font-size: 0.75rem; font-weight: 600; color: var(--terracotta); }
-.ref-item h3 { font-size: 1rem; font-family: var(--font-body); font-weight: 600; color: var(--navy); margin-bottom: 4px; }
-.ref-item__meta { color: var(--ink-soft); font-size: 0.87rem; margin-bottom: 6px; }
-.ref-item a { color: var(--navy-soft); font-size: 0.87rem; text-decoration: underline; text-underline-offset: 2px; }
-.ref-item__note { color: var(--ink-soft); font-size: 0.85rem; margin-top: 6px; font-style: italic; }
-
-@media (max-width: 620px) {
-  .ref-item { grid-template-columns: 1fr; gap: 6px; }
+.ref-item__type {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--terracotta);
 }
 
+.ref-item h3 {
+  font-size: 1rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.ref-item__meta {
+  color: var(--ink-soft);
+  font-size: 0.87rem;
+  margin-bottom: 6px;
+}
+
+.ref-item a {
+  color: var(--navy-soft);
+  font-size: 0.87rem;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ref-item__note {
+  color: var(--ink-soft);
+  font-size: 0.85rem;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+
+/* ─────────────────────────────────────────────────────────
+   REFERENCES — MOBILE
+   ───────────────────────────────────────────────────────── */
+
+@media (max-width: 620px) {
+  .ref-item {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
 /* ── Footer ────────────────────────────────────────────────────────── */
 .footer { background: var(--navy); color: rgba(255,255,255,0.65); padding: 56px 0 30px; font-size: 0.88rem; }
 
