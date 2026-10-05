@@ -1537,9 +1537,8 @@ button { font-family: var(--font-body); cursor: pointer; }
     gap: 20px;
   }
 }
-//* ─────────────────────────────────────────────────────────
-   CONCLUSION
-   ───────────────────────────────────────────────────────── */
+
+
 
 #conclusion {
   padding: 80px 0 96px;

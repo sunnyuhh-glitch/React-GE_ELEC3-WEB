@@ -15,8 +15,11 @@ export const siteConfig = {
   members: [
     'SEAN CASIRACAN',
     'SUNNY CORPIN',
-    'SEAN BENEDICK DE ATRAS',
+    'SEAN BENEDECK DE ATRAS',
     'JOHN GITTER PERITO',
+    'CLARENCE BURBANO',
+    'JOHN PAUL GLEE',
+    'DOWELL JHAZ CUIZON'
   ],
   courseSection: 'BS INFO. TECH - 3A',
   instructor: 'RHEA MAE P. TICONG, LPT',
